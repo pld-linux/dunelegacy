@@ -34,7 +34,7 @@ series.
 NOTE: Original Dune 2 game files are needed.
 
 %description -l pl
-Poprowad¼ jedn± z trzech miêdzyplanetarnych rodzin, Atreidesów,
+Poprowad¼ jedn± z trzech miêdzyplanetarnych rodzin, Atrydów,
 Harkonnenów lub Ordosów, w wy¶cigu w zebraniu jak najwiêkszej ilo¶ci
 przyprawy z pustynnych wydm. Wymieñ zapasy przyprawy na kredyty w
 procesie udoskonalania i stwórz armiê zdoln± powstrzymaæ próby innych
