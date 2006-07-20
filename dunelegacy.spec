@@ -14,7 +14,7 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_net-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	libstdc++-devel
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig
 BuildRequires:	zziplib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,12 +40,12 @@ przyprawy z pustynnych wydm. Wymieñ zapasy przyprawy na kredyty w
 procesie udoskonalania i stwórz armiê zdoln± powstrzymaæ próby innych
 rodzin w zmuszeniu Ciê do zaprzestania zbierania przyprawy!
 
-Dune Legacy jest podjet± przez grupê utalentowanych programistów prób±
+Dune Legacy jest podjêt± przez grupê utalentowanych programistów prób±
 o¿ywienia pierwszej strategii czasu rzeczywistego. Gra by³a wzorem dla
 odnosz±cej olbrzymie sukcesy serii Command and Conquer, a styl gry
 zosta³ powielony w du¿ej ilo¶ci innych gier.
 
-UWAGA: Potrzebne sa pliki wchodz±ce w sk³ad Dune 2.
+UWAGA: Potrzebne s± pliki wchodz±ce w sk³ad Dune 2.
 
 %prep
 %setup -q
