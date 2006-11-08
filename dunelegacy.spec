@@ -1,12 +1,12 @@
 Summary:	Updated clone of Westood Studios' Dune2
 Summary(pl):	Zaktualizowany klon gry Dune2
 Name:		dunelegacy
-Version:	0.94
+Version:	0.94.1
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games/Strategy
 Source0:	http://dl.sourceforge.net/dunelegacy/%{name}-%{version}.tar.gz
-# Source0-md5:	f53391b46a18696dcd60ce2e8c610a6f
+# Source0-md5:	4cf34d739979f53bdf1cdc32b17ebb78
 URL:		http://dunelegacy.sourceforge.net/
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
@@ -15,6 +15,7 @@ BuildRequires:	SDL_net-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	pkgconfig
+BuildRequires:	scons
 BuildRequires:	zziplib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -51,10 +52,7 @@ UWAGA: Potrzebne s± pliki wchodz±ce w sk³ad Dune 2.
 %setup -q
 
 %build
-%{__make} \
-	CC="%{__cc}" \
-	CXX="%{__cxx}" \
-	CFLAGS="%{rpmcflags} `sdl-config --cflags`"
+scons
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -67,4 +65,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog README
 %attr(755,root,root) %{_bindir}/%{name}
