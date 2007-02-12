@@ -1,5 +1,5 @@
 Summary:	Updated clone of Westood Studios' Dune2
-Summary(pl):	Zaktualizowany klon gry Dune2
+Summary(pl.UTF-8):   Zaktualizowany klon gry Dune2
 Name:		dunelegacy
 Version:	0.94.1
 Release:	0.1
@@ -34,19 +34,19 @@ series.
 
 NOTE: Original Dune 2 game files are needed.
 
-%description -l pl
-Poprowad¼ jedn± z trzech miêdzyplanetarnych rodzin, Atrydów,
-Harkonnenów lub Ordosów, w wy¶cigu w zebraniu jak najwiêkszej ilo¶ci
-przyprawy z pustynnych wydm. Wymieñ zapasy przyprawy na kredyty w
-procesie udoskonalania i stwórz armiê zdoln± powstrzymaæ próby innych
-rodzin w zmuszeniu Ciê do zaprzestania zbierania przyprawy!
+%description -l pl.UTF-8
+PoprowadÅº jednÄ… z trzech miÄ™dzyplanetarnych rodzin, AtrydÃ³w,
+HarkonnenÃ³w lub OrdosÃ³w, w wyÅ›cigu w zebraniu jak najwiÄ™kszej iloÅ›ci
+przyprawy z pustynnych wydm. WymieÅ„ zapasy przyprawy na kredyty w
+procesie udoskonalania i stwÃ³rz armiÄ™ zdolnÄ… powstrzymaÄ‡ prÃ³by innych
+rodzin w zmuszeniu CiÄ™ do zaprzestania zbierania przyprawy!
 
-Dune Legacy jest podjêt± przez grupê utalentowanych programistów prób±
-o¿ywienia pierwszej strategii czasu rzeczywistego. Gra by³a wzorem dla
-odnosz±cej olbrzymie sukcesy serii Command and Conquer, a styl gry
-zosta³ powielony w du¿ej ilo¶ci innych gier.
+Dune Legacy jest podjÄ™tÄ… przez grupÄ™ utalentowanych programistÃ³w prÃ³bÄ…
+oÅ¼ywienia pierwszej strategii czasu rzeczywistego. Gra byÅ‚a wzorem dla
+odnoszÄ…cej olbrzymie sukcesy serii Command and Conquer, a styl gry
+zostaÅ‚ powielony w duÅ¼ej iloÅ›ci innych gier.
 
-UWAGA: Potrzebne s± pliki wchodz±ce w sk³ad Dune 2.
+UWAGA: Potrzebne sÄ… pliki wchodzÄ…ce w skÅ‚ad Dune 2.
 
 %prep
 %setup -q
