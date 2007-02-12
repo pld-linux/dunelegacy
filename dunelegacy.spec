@@ -1,5 +1,5 @@
 Summary:	Updated clone of Westood Studios' Dune2
-Summary(pl.UTF-8):   Zaktualizowany klon gry Dune2
+Summary(pl.UTF-8):	Zaktualizowany klon gry Dune2
 Name:		dunelegacy
 Version:	0.94.1
 Release:	0.1
