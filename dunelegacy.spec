@@ -2,11 +2,12 @@ Summary:	Updated clone of Westood Studios' Dune2
 Summary(pl.UTF-8):	Zaktualizowany klon gry Dune2
 Name:		dunelegacy
 Version:	0.94.1
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games/Strategy
 Source0:	http://dl.sourceforge.net/dunelegacy/%{name}-%{version}.tar.gz
 # Source0-md5:	4cf34d739979f53bdf1cdc32b17ebb78
+Patch0:		%{name}-Werror.patch
 URL:		http://dunelegacy.sourceforge.net/
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
@@ -50,9 +51,10 @@ UWAGA: Potrzebne są pliki wchodzące w skład Dune 2.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
-scons
+%scons
 
 %install
 rm -rf $RPM_BUILD_ROOT
