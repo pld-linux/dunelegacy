@@ -16,6 +16,7 @@ BuildRequires:	SDL_net-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	pkgconfig
+BuildRequires:	rpmbuild(macros) >= 1.337
 BuildRequires:	scons
 BuildRequires:	zziplib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
