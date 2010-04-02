@@ -8,6 +8,7 @@ Group:		X11/Applications/Games/Strategy
 Source0:	http://www.myway.de/richieland/%{name}-%{version}-src.tar.bz2
 # Source0-md5:	fccb7d917118439fc4a401b81f2e052f
 URL:		http://dunelegacy.sourceforge.net/
+Patch0:		%{name}-desktop.patch
 BuildRequires:	SDL_gfx-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
@@ -51,6 +52,7 @@ UWAGA: Potrzebne są pliki wchodzące w skład Dune 2.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
