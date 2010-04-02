@@ -1,23 +1,22 @@
 Summary:	Updated clone of Westood Studios' Dune2
 Summary(pl.UTF-8):	Zaktualizowany klon gry Dune2
 Name:		dunelegacy
-Version:	0.94.1
+Version:	0.96
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		X11/Applications/Games/Strategy
-Source0:	http://dl.sourceforge.net/dunelegacy/%{name}-%{version}.tar.gz
-# Source0-md5:	4cf34d739979f53bdf1cdc32b17ebb78
-Patch0:		%{name}-Werror.patch
+Source0:	http://www.myway.de/richieland/%{name}-%{version}-src.tar.bz2
+# Source0-md5:	fccb7d917118439fc4a401b81f2e052f
 URL:		http://dunelegacy.sourceforge.net/
-BuildRequires:	SDL-devel
+BuildRequires:	SDL_gfx-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_net-devel
 BuildRequires:	SDL_ttf-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libstdc++-devel
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.337
-BuildRequires:	scons
 BuildRequires:	zziplib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,7 +40,7 @@ Poprowadź jedną z trzech międzyplanetarnych rodzin, Atrydów,
 Harkonnenów lub Ordosów, w wyścigu w zebraniu jak największej ilości
 przyprawy z pustynnych wydm. Wymień zapasy przyprawy na kredyty w
 procesie udoskonalania i stwórz armię zdolną powstrzymać próby innych
-rodzin w zmuszeniu Cię do zaprzestania zbierania przyprawy!
+rodzin w zmuszeniu cię do zaprzestania zbierania przyprawy!
 
 Dune Legacy jest podjętą przez grupę utalentowanych programistów próbą
 ożywienia pierwszej strategii czasu rzeczywistego. Gra była wzorem dla
@@ -52,21 +51,31 @@ UWAGA: Potrzebne są pliki wchodzące w skład Dune 2.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
-%scons
+%{__aclocal}
+%{__autoconf}
+%{__automake}
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
-install %{name} $RPM_BUILD_ROOT%{_bindir}
+%{__make} install \
+        DESTDIR=$RPM_BUILD_ROOT
+
+install dunelegacy.desktop $RPM_BUILD_ROOT%{_desktopdir}
+install dunelegacy.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc README ToDo.txt
 %attr(755,root,root) %{_bindir}/%{name}
+%{_datadir}/%{name}
+%{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.png
