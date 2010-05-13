@@ -9,11 +9,7 @@ Source0:	http://www.myway.de/richieland/%{name}-%{version}-src.tar.bz2
 # Source0-md5:	fccb7d917118439fc4a401b81f2e052f
 URL:		http://dunelegacy.sourceforge.net/
 Patch0:		%{name}-desktop.patch
-BuildRequires:	SDL_gfx-devel
-BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
-BuildRequires:	SDL_net-devel
-BuildRequires:	SDL_ttf-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
