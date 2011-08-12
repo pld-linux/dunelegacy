@@ -1,12 +1,12 @@
 Summary:	Updated clone of Westood Studios' Dune2
 Summary(pl.UTF-8):	Zaktualizowany klon gry Dune2
 Name:		dunelegacy
-Version:	0.96.1
+Version:	0.96.2
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games/Strategy
 Source0:	http://www.myway.de/richieland/%{name}-%{version}-src.tar.bz2
-# Source0-md5:	afe35eb859c8cd769535b3a37f4b803b
+# Source0-md5:	5afc9169e52552042b51502ba02e5f7e
 URL:		http://dunelegacy.sourceforge.net/
 Patch0:		%{name}-desktop.patch
 BuildRequires:	SDL_mixer-devel
